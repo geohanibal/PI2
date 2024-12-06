@@ -42,9 +42,12 @@ public class GraphenAlgorithmen {
         verbinde('D','G');
 
         bfs('A');
+        System.out.println(" ");
+        dfs('A');
 
     }
 
+    //BFS
     static void bfs(Character startKnoten){
         Set<Character> besucht = new HashSet<>();
         Queue<Character> warteshlange = new LinkedList<>();
@@ -70,4 +73,28 @@ public class GraphenAlgorithmen {
         }
     }
 
-}
+    //DFS
+    static void dfs(Character startKnoten) {
+        Set<Character> besucht = new HashSet<>();
+        Stack<Character> stapel = new Stack<>();
+        List<Character> alleKnot = new ArrayList<>();
+
+        stapel.add(startKnoten);
+        besucht.add(startKnoten);
+
+        while (!stapel.isEmpty()){
+            Character naechsterKnoten = stapel.pop();
+            alleKnot.add(naechsterKnoten);
+
+            for (Character nachbar : graph.get(naechsterKnoten)){
+                if(!besucht.contains(nachbar)){
+                    stapel.add(nachbar);
+                    besucht.add(nachbar);
+                }
+            }
+        }
+        for ( Character knoten : alleKnot){
+            System.out.print(knoten + " ");
+        }
+    }
+    }
