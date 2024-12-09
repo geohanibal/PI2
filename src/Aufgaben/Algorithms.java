@@ -241,37 +241,45 @@ public class Algorithms
         if(word1 == null || word2 == null || word1.length() != word2.length()){
             return false;
         }
+      //  HashMap<Character,Integer> charCount = new HashMap<>();
 
-        HashMap<Character, Integer> charCount = new HashMap<>();
+        // Zeichen aus word1 in eine ArrayList einfügen
         ArrayList<Character> word1List = new ArrayList<>();
-        ArrayList<Character> word2List = new ArrayList<>();
-        for (char c : word1.toCharArray()){
+        for (char c : word1.toCharArray()) {
             word1List.add(c);
         }
-        for (char c : word2.toCharArray()){
-            for (int i = 0; i < word1List.size(); i++) {
 
+        // Zeichen aus word2 prüfen und aus der ArrayList entfernen
+        for (char c : word2.toCharArray()) {
+            if (word1List.contains(c)) {
+                word1List.remove((Character) c); // Entferne das erste Auftreten von c
+            } else {
+                return false; // Wenn ein Zeichen nicht gefunden wird, kein Anagramm
             }
         }
 
+        // Wenn alle Zeichen entfernt wurden, ist es ein Anagramm
+        return word1List.isEmpty();
 
 
-
-
-
-
-        // Wenn alle Buchstaben entfernt wurden, handelt es sich um ein Anagramm
-        return word2List.isEmpty();
     }
 
     public static void main(String[] args) {
-        String word1 = "123";
-        String word2 = "231";
+        String word1 = "sergi";
+        String word2 = "igres";
+
+
+
+if(anagram(word1,word2)){
+    System.out.println("true");
+}
 
 
 
 
     }
+
+
 
     /**
      * Hier soll ein Wort dahingehend untersucht werden, ob es sich an endlich vielen Stellen teilen lässt, sodass
