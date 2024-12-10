@@ -1,8 +1,4 @@
-package Aufgaben;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
+package de;
 
 /**
  * Hier folgen einige Beispielaufgaben zu Algorithmen
@@ -24,6 +20,9 @@ import java.util.HashMap;
  */
 public class Algorithms
 {
+
+
+
     /**
      * Hier soll mittels des bekannten Cashier Algorithmus berechnet werden, wie viele Scheine
      * beziehungsweise Münzen welcher Stelligkeit zur Bezahlung eines Preises nötig sind.
@@ -76,24 +75,9 @@ public class Algorithms
      *      2 x 2
      *      0 x 1
      */
-    public static int[] cashier(final int price )
+    public static int[] cashier(final int price)
     {
-
-        int [] price1 = {100,50,20,10,5,2,1};
-        int [] ausgabe = new int[price1.length];
-         int preis = price;
-        if (price < 0) {
-        throw new IllegalArgumentException("Price cannot be negativ.");
-        }
-        for (int i = 0; i < price1.length ; i++) {
-
-            ausgabe[i] = preis / price1[i];
-            preis %= price1[i];
-
-        }
-
-        return ausgabe;
-
+        return null;
     }
 
     /**
@@ -117,32 +101,10 @@ public class Algorithms
      *          <p>
      *          The input array without duplicates
      */
-    public static <E> E[] filter(final E[] list )
+    public static <E> E[] filter(final E[] list)
     {
-        if (list == null || list.length == 0) {
-            return list;
-        }
-       int uniKeyCounter = 1 ;
-
-        for (int i = 1; i < list.length; i++) {
-
-            int j;
-            for ( j = 0; j < uniKeyCounter; j++) {
-                if (list[i].equals(list[j])){
-                    break;
-                }
-            }
-
-                if (j == uniKeyCounter ){
-                    list[uniKeyCounter] = list[i];
-                    uniKeyCounter++;
-                }
-        }
-        return Arrays.copyOf(list,uniKeyCounter);
-
+        return null;
     }
-
-
 
     /**
      * Hier soll ein Algorithmus implementiert werden, der die ersten n Catalan-Zahlen berechnet.
@@ -182,33 +144,9 @@ public class Algorithms
      */
     public static int[] catalan(final int n)
     {
-        if (n < 1){
-           return null;
-        }
-        int [] output = new int[n];
-        output[0] = 1;
-        for (int i = 1 ; i < n; i++) {
-
-            int factorial2N = factorial(2* i);
-            int factorialNPlus1= factorial(i + 1);
-            int factorialN = factorial(i);
-            int sum = factorial2N / (factorialNPlus1 * factorialN) ;
-
-            output[i] = sum  ;
-        }
-        return output ;
+        return null;
     }
 
-    private   static int factorial(final int a ){
-        int result = 1;
-        for (int i = 1; i < a + 1; i++) {
-            result = result * i;
-        }
-        if(a < 1 ){
-            result = 1;
-        }
-        return result ;
-    }
     /**
      * Hier sollen 2 Wörter dahingehend untersucht werden, ob es sich bei einem der Wörter um ein Anagramm des
      * anderen Wortes handelt, also ob sich das erste Wort als Permutation des anderen Wortes ergibt.
@@ -237,38 +175,8 @@ public class Algorithms
      */
     public static boolean anagram(final String word1, final String word2)
     {
-        // NULL oder ungleiche Längen können keine Anagramme sein
-        if(word1 == null || word2 == null || word1.length() != word2.length()){
-            return false;
-        }
-      //  HashMap<Character,Integer> charCount = new HashMap<>();
-       ArrayList<Character> word1List = new ArrayList<>();
-
-        for (char c : word1.toCharArray()){
-            word1List.add(c);
-        }
-
-        for (char c : word2.toCharArray()){
-            if(word1List.contains(c)){
-                word1List.remove((Character) c);
-            }else {
-                return false;
-            }
-        }
-return word1List.isEmpty();
+        return false;
     }
-
-    /**
-     * diese Method ist Rekusiv
-     * @param n
-     * @return fibonachi zahlen
-     */
-    public static long fibonachiRekusiv(int n){
-        return n < 2 ? n : fibonachiRekusiv(n-1) + fibonachiRekusiv(n-2) ;
-    }
-
-
-
 
     /**
      * Hier soll ein Wort dahingehend untersucht werden, ob es sich an endlich vielen Stellen teilen lässt, sodass
@@ -299,45 +207,7 @@ return word1List.isEmpty();
      */
     public static boolean identicalParts(final String word)
     {
-        if (word.length() < 2 || word == null){
-            return false;
-        }
-
-        int length = word.length();
-
-        for (int i = 1 ; i <= length / 2 ; i++){
-            if (length % i == 0){
-                String substring = word.substring(0,i); //შესაძლო სიტყვის ვარიანტი
-                StringBuilder builder = new StringBuilder();
-                // erzeuge das wort und wiederhole des Teilworts
-                for (int j = 0; j < length /i; j++) {
-                    builder.append(substring);
-                }
-                if(builder.toString().equals(word)){
-                    return true;
-                }
-            }
-        }
-
-
-
         return false;
-    }
-
-
-    public static void main(String[] args) {
-
-
-        String word= "ABCABCABC";
-        StringBuilder builder = new StringBuilder();
-
-        for (int i = 0; i <3 ; i++) {
-            System.out.println(builder.append(word));
-        }
-
-        //System.out.println(word.substring(0,3));
-
-
     }
 
     /**
@@ -351,11 +221,8 @@ return word1List.isEmpty();
      * be restricted. We assume that neither 0 nor negative numbers can be added to the queue. Hence 0 can be interpreted as
      * indicator that a cell is not used
      */
-
     public static class DataQueue
     {
-
-
         /**
          * Die interne Speicherverwaltung der Queue
          * <p>
@@ -363,7 +230,6 @@ return word1List.isEmpty();
          */
         private final int[] store;
 
-        int head = 0;
         /**
          * Erzeugt ein neues Objekt vom Datentyp DataQueue
          * <p>
@@ -374,10 +240,6 @@ return word1List.isEmpty();
          */
         public DataQueue(int limit)
         {
-            if(limit < 0){
-                throw new IllegalArgumentException("es kann nicht negativ oder 0 sein ");
-            }
-
             store = new int[limit];
         }
 
@@ -398,14 +260,6 @@ return word1List.isEmpty();
          */
         public boolean put(final int value)
         {
-            if (value <= 0) { // Nur positive Werte erlaubt
-                throw new IllegalArgumentException("Nur positive Zahlen erlaubt.");
-            }
-            if(head < store.length ){
-                store[head] = value ;
-                head ++ ;
-                return true;
-            }
             return false;
         }
 
@@ -423,25 +277,8 @@ return word1List.isEmpty();
          */
         public int get()
         {
-            int ergebnis = store[0];
-
-            if(head == 0){
-                return -1;
-            }
-            if (head == 1){
-
-                 store[0] = -1;
-            }
-
-                for (int i = 0; i < head + 1; i++) {
-
-                    store[i] = store[i + 1];
-            }
-            head --;
-            return ergebnis;
-
+            return 0;
         }
-
     }
 
     /**
@@ -463,7 +300,7 @@ return word1List.isEmpty();
          * The internal storage of the Queue
          */
         private final int[] store;
-        int head;
+
         /**
          * Erzeugt ein neues Objekt vom Datentyp DataStack
          * <p>
@@ -474,12 +311,6 @@ return word1List.isEmpty();
          */
         public DataStack(int limit)
         {
-            if(limit < 0){
-                throw new IllegalArgumentException("limit muss mehr als 0 sein");
-            }
-
-            head = 0;
-
             store = new int[limit];
         }
 
@@ -500,13 +331,6 @@ return word1List.isEmpty();
          */
         public boolean push(final int value)
         {
-            if(value < 0){
-                throw new IllegalArgumentException("limit muss mehr als 1 sein");
-            }else if (head < store.length) {
-                store[head] = value;
-                head++;
-                return true;
-            }
             return false;
         }
 
@@ -524,18 +348,7 @@ return word1List.isEmpty();
          */
         public int pop()
         {
-            if (head == 0){
-                return -1;
-            }
-            if (store[head -1 ] == 0){
-                head --;
-                return -1;
-            }
-            int ergebnis = store[head -1];
-            store[head -1] = 0;
-
-            head--;
-            return ergebnis;
+            return 0;
         }
     }
 

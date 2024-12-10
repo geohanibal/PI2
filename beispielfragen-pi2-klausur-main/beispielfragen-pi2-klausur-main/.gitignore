@@ -1,0 +1,7 @@
+# Temporäre IntelliJ-Dateien
+out/
+*.iws
+
+# Versteckte Dateien (aber .gitignore behalten)
+.*
+!.gitignore

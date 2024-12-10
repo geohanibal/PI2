@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="InspectionProjectProfileManager">
+    <profile version="1.0">
+      <option name="myName" value="Project Default" />
+    </profile>
+    <version value="1.0" />
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Algorithmen.iml" filepath="$PROJECT_DIR$/Algorithmen.iml" />
+    </modules>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="corretto-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="libraryTable">
+    <library name="Algorithmen">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/out/production/Algorithmen" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <excluded>
+        <root url="file://$PROJECT_DIR$/out/production/Algorithmen" />
+      </excluded>
+    </library>
+  </component>
+</project>

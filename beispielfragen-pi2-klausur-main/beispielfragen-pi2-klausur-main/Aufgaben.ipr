@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="InspectionProjectProfileManager">
+    <profile version="1.0">
+      <option name="myName" value="Project Default" />
+    </profile>
+    <version value="1.0" />
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Aufgaben-Algorithmen/Aufgaben-Algorithmen.iml" filepath="$PROJECT_DIR$/Aufgaben-Algorithmen/Aufgaben-Algorithmen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aufgaben-Baum/Aufgaben-Baum.iml" filepath="$PROJECT_DIR$/Aufgaben-Baum/Aufgaben-Baum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aufgaben-Datenstrukturen/Aufgaben-Datenstrukturen.iml" filepath="$PROJECT_DIR$/Aufgaben-Datenstrukturen/Aufgaben-Datenstrukturen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aufgaben-Graphen/Aufgaben-Graphen.iml" filepath="$PROJECT_DIR$/Aufgaben-Graphen/Aufgaben-Graphen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aufgaben-Suchen-Sortieren/Aufgaben-Suchen-Sortieren.iml" filepath="$PROJECT_DIR$/Aufgaben-Suchen-Sortieren/Aufgaben-Suchen-Sortieren.iml" />
+    </modules>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="corretto-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="libraryTable">
+    <library name="Aufgaben">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/out/production/Aufgaben" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <excluded>
+        <root url="file://$PROJECT_DIR$/out/production/Aufgaben" />
+      </excluded>
+    </library>
+  </component>
+</project>
