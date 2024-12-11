@@ -1,4 +1,4 @@
-package de.uni_bremen.pi2;
+package klausurVobereitung;
 
 /**
  * Aufgabe 1: Vergrößern der Kapazität eines Arrays dynamischer Größe (20 %).
