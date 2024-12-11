@@ -3,6 +3,7 @@ package Aufgaben;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * Hier folgen einige Beispielaufgaben zu Algorithmen
@@ -540,6 +541,13 @@ return word1List.isEmpty();
     }
 
     /**
+     * ეს კლასი წარმოადგენს მრავალფენოვან სიმრავლეს მათემატიკის გაგებით.
+     * იგი ინიციალიზდება გენერიკული მასივის გამოყენებით და ამჟამად მხოლოდ მას ინახავს.
+     * თქვენი ამოცანაა, რომ სწორად იმპლემენტიროთ მეთოდი `equals`, რათა ორი სიმრავლე ჩაითვალოს ტოლად,
+     * თუ მათი შიგთავსი ტოლია.
+     * მაგალითად, [1, 2, 3]-ის შემცველი სიმრავლე ტოლია [3, 1, 2, 1]-ის შემცველი სიმრავლეს, რადგან ორივე
+     * შეიცავს ერთსა და იმავე მნიშვნელობებს.
+     *
      * This class represents a mathematical set. It can be initialized using a generic array and only saves it by now.
      * Your exercise here is to implement equals for this class so that two sets are seen as equal when their contents
      * are equal. E.g. a set with content [1, 2, 3] should be equal to a set with content [3, 1, 2, 1] because they both contain
@@ -551,7 +559,7 @@ return word1List.isEmpty();
      * Set mit [3, 1, 2, 1] da beide die gleichen Elemente enthalten
      *
      */
-    public static class SpecialSet<E>
+    public static class SpecialSet<E extends Number  >
     {
         /**
          * The content of our set
@@ -559,6 +567,7 @@ return word1List.isEmpty();
          * Die Werte im Set
          */
         private final E[] content;
+
 
         /**
          * Initializes a new set with a given content
@@ -568,11 +577,16 @@ return word1List.isEmpty();
          *                <p>
          *                Der Inhalt
          */
-        SpecialSet(final E[] content)
+        SpecialSet(final E[] content )
         {
             this.content = content;
         }
+
+
+
     }
+
+
 
     /**
      * Diese Methode findet das zusammenhängende Teilarray eines Eingabearrays, welches sich zur größten
@@ -580,6 +594,11 @@ return word1List.isEmpty();
      * Die Eingabe darf sowohl negative als auch positive ganzzahlige Werte enthalten.
      * Die Ausgabe kann die Summe über dem leeren Array sein, falls nur negative Werte enthalten sind.
      * <p>
+     *     * ეს მეთოდი პოულობს მოცემული მასივის ისეთ მეზობლად განლაგებულ ქვემასივს, რომლის ელემენტების ჯამი მაქსიმალურია,
+     *  * და გამოთვლის ამ ჯამს.
+     *  * შესასვლელ მონაცემად შეიძლება იყოს როგორც დადებითი, ისე უარყოფითი მთელი რიცხვები.
+     *  * შედეგი შეიძლება იყოს ცარიელი მასივის ჯამიც, თუ მასივი მხოლოდ უარყოფით რიცხვებს შეიცავს.
+     *  *
      * This method calculates the subarray of an input array which contains the highest sum and calculates this sum.
      * The input can contain positive numbers as well as negative integer numbers.
      *  The output can be the sum over the empty array if there are only negative numbers.
@@ -595,8 +614,25 @@ return word1List.isEmpty();
      * <p>
      *                               if the input array was empty or null
      */
-    public static int maxSubArraySum(int[] array)
-    {
-        return -1;
+    public static int maxSubArraySum(int[] array) {
+        if (array == null || array.length == 0) {
+            throw new IllegalArgumentException("Das array darf nicht leer sein");
+        }
+        int maxSam = 0;
+        int curentSum = 0;
+
+
+        for (int sum : array){
+            curentSum += sum;
+            if(curentSum < 0){
+                curentSum = 0;
+            }
+            if (curentSum > maxSam){
+                maxSam = curentSum;
+            }
+
+        }
+        return maxSam;
     }
 }
+
