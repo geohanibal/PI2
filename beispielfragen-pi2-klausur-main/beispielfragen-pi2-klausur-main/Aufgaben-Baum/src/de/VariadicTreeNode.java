@@ -100,7 +100,7 @@ public class VariadicTreeNode<E>
 
     @Override
     public String toString() {
-        return "Node{" +
+        return "alteKlausur.Node{" +
                 "value=" + value +
                 ", Children("+value+") =" + children.toString() + "\n" +
                 '}';

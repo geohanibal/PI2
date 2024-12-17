@@ -332,7 +332,7 @@ public class TreeOperations
      * wobei das erste Argument den linken Kindknoten bestimmt. Das übergebene Element darf NULL sein, in diesem
      * Fall müssen beide Bäume den gleichen Wert im Wurzelknoten gespeichert haben und dürfen jeweils nur einen
      * Nachfolgeknoten besitzen. Dieser Knoten wird in diesem Fall die neue Wurzel. Beachtet hierbei,
-     * dass die Node-Klasse lediglich eine Implementierung von Equals besitzt, welche ganze Bäume auf Gleichheit prüft,
+     * dass die alteKlausur.Node-Klasse lediglich eine Implementierung von Equals besitzt, welche ganze Bäume auf Gleichheit prüft,
      * diese darf nicht verändert werden.
      * <p>
      * Here you should merge two binary trees into a single tree.
@@ -340,7 +340,7 @@ public class TreeOperations
      * two original trees with the first tree being the left child. If the given element is NULL then both trees must
      * have the same value in their roots and are only allowed to contain a single child each. Their mutual root will
      * then be the new root of the tree and the child of the first tree will be the left child and the child of the right
-     * tree the new right child. The Node-class has implemented a equals-method to compare nodes which should not be
+     * tree the new right child. The alteKlausur.Node-class has implemented a equals-method to compare nodes which should not be
      * changed.
      *
      * @param root1 Die Wurzel des ersten Baums

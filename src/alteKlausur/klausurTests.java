@@ -57,4 +57,39 @@ public class klausurTests {
         assertEquals(3, BinarySearch.binarySearch(array, "date", comparator)); // Element "date"
         assertEquals(-1, BinarySearch.binarySearch(array, "grape", comparator)); // Element "grape" nicht vorhanden
     }
-}
+
+
+
+        @Test
+        void testTreeHeightNullRoot() {
+            // Test mit null als Wurzel
+            assertEquals(0, TreHeigh.treeHeight(null), "Höhe eines leeren Baums sollte 0 sein.");
+        }
+
+        @Test
+        void testTreeHeightSingleRoot() {
+            // Test mit einem einzigen Knoten
+            Node root = new Node(null, null);
+            assertEquals(1, TreHeigh.treeHeight(root), "Höhe eines Baums mit einem Knoten sollte 1 sein.");
+        }
+
+        @Test
+        void testTreeHeightBalancedTree() {
+            // Test mit einem balancierten Baum
+            Node leftChild = new Node(null, null);
+            Node rightChild = new Node(null, null);
+            Node root = new Node(leftChild, rightChild);
+            assertEquals(2, TreHeigh.treeHeight(root), "Höhe eines balancierten Baums sollte korrekt berechnet werden.");
+        }
+
+        @Test
+        void testTreeHeightUnbalancedTree() {
+            // Test mit einem unbalancierten Baum
+            Node leftChild = new Node(new Node(null, null), null);
+            Node root = new Node(leftChild, null);
+            assertEquals(3, TreHeigh.treeHeight(root), "Höhe eines unbalancierten Baums sollte korrekt berechnet werden.");
+        }
+    }
+
+
+

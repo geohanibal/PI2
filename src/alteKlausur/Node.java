@@ -1,4 +1,7 @@
+package alteKlausur;
+
 /**
+ *
  * Der Knoten eines Binärbaums
  * @param <E> Der Typ des Werts, der im Knoten gespeichert werden kann.
  */
@@ -15,9 +18,11 @@ public class Node<E>
 
     /**
      * Konstruktor für einen Knoten ohne Kinder.
+     *
      * @param info Der im Knoten gespeicherte Wert.
+     * @param o
      */
-    public Node(final E info)
+    public Node(final E info, Object o)
     {
         this(info, null, null);
     }
@@ -103,15 +108,15 @@ public class Node<E>
     public static void main(String[] args) {
         final Node<Integer> n = new Node<>(1,
                 new Node<>(2,
-                        new Node<>(4),
+                        new Node<>(4, null),
                         new Node<>(5,
-                                new Node<>(6),
-                                new Node<>(7))),
-                new Node<>(3));
+                                new Node<>(6, null),
+                                new Node<>(7, null))),
+                new Node<>(3, null));
         int i = n.getLeft().getInfo();
         final Node<String> s = new Node<>("Halo",
-                new Node<>("da"),
-                new Node<>("du"));
+                new Node<>("da", null),
+                new Node<>("du", null));
 
         System.out.println(n);
         System.out.println(s);

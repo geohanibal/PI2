@@ -26,22 +26,23 @@ public class BinarySearch {
      * enthalten, wird -1 zurückgegeben.
      */
     public static <E> int binarySearch(final E[] array, final E key, final Comparator<E> order) {
-        if (array.length == 0){
-            return -1;}
-        int bottom = 0;
-        int top = array.length;
 
-        while(bottom + 1 < top) {
-            final int middle = bottom + (top - bottom) / 2;
-            if (order.compare(key, array[middle]) >= 0) {
-                bottom = middle;
-            } else {
-                top = middle;
-            }
-        }
-        final int comp = order.compare(key, array[bottom]);
-
-        return comp == 0 ? bottom : -1;
+if(array.length == 0){
+    return -1;
+}
+int bottom = 0;
+int top = array.length;;
+while (bottom + 1 < array.length){
+   final int mitte = bottom + (top - bottom)/2;
+    if(order.compare(key,array[mitte]) >= 0){
+        bottom = mitte;
+    }else {
+        top = mitte;
     }
+}
+final int com = order.compare(key,array[bottom]);
+return com == 0 ? bottom : -1;
+    }
+
 
 }

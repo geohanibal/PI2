@@ -126,7 +126,7 @@ public class Node<E>
 
     /*@Override
     public String toString() {
-        return "Node{" +
+        return "alteKlausur.Node{" +
                 "value=" + value +
                 ", leftChild("+value+") =" + leftChild + "\n" +
                 ", rightChild("+value+") =" + rightChild +
