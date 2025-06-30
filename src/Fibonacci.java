@@ -1,4 +1,3 @@
-package de.uni_bremen.pi2;
 
 /**
  * Zwei Implementierungen der Berechnung der Fibonacci-Zahlen.
@@ -39,6 +38,14 @@ public class Fibonacci
         else {
             final long[] pair = fibonacciFast2(n - 1);
             return new long[] {pair[0] + pair[1], pair[0]};
+        }
+    }
+
+    public static long[] fibonachiSergi(final  long n){
+        if (n < 2) {
+            return new long[]{n, 0};
+        } else {
+            return new long[] {};
         }
     }
 }
