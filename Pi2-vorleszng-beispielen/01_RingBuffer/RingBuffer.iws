@@ -20,6 +20,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -36,9 +39,11 @@
     "JUnit.RingBufferTest.executor": "Run",
     "JUnit.RingBufferTest.testCapacity0.executor": "Run",
     "JUnit.RingBufferTest.testSize1.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "run.code.analysis.last.selected.profile": "pProject Default"
@@ -52,7 +57,7 @@
       <recent name="de.uni_bremen.pi2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RingBufferTest">
+  <component name="RunManager" selected="JUnit.NewRingbaberTest.main">
     <configuration name="NewRingbaberTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="de.uni_bremen.pi2.NewRingbaberTest" />
       <module name="RingBuffer" />
@@ -67,7 +72,7 @@
       </method>
     </configuration>
     <configuration name="NewRingbaberTest.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RingBuffer" />
+      <module name="untrusted" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="de.uni_bremen.pi2.*" />
@@ -83,7 +88,7 @@
       </method>
     </configuration>
     <configuration name="RingBufferTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RingBuffer" />
+      <module name="untrusted" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="de.uni_bremen.pi2.*" />
@@ -92,6 +97,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.uni_bremen.pi2" />
       <option name="MAIN_CLASS_NAME" value="de.uni_bremen.pi2.RingBufferTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,8 +137,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RingBufferTest" />
         <item itemvalue="JUnit.NewRingbaberTest.main" />
+        <item itemvalue="JUnit.RingBufferTest" />
         <item itemvalue="Application.NewRingbaberTest" />
         <item itemvalue="JUnit.RingBufferTest.testSize1" />
         <item itemvalue="JUnit.RingBufferTest.testCapacity0" />
