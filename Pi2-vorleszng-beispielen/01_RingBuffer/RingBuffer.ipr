@@ -18,6 +18,9 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
   </component>
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/report/de.uni_bremen.pi2/index.html;C:/Users/49172/Desktop/PI/pi2/klausurVobereitung/Pi2-vorleszng-beispielen/01_RingBuffer/report/de.uni_bremen.pi2/RingBuffer.java.html;C:/Users/49172/Desktop/PI/pi2/klausurVobereitung/Pi2-vorleszng-beispielen/01_RingBuffer/report/de.uni_bremen.pi2/RingBufferTest.java.html;C:/Users/49172/Desktop/PI/pi2/klausurVobereitung/Pi2-vorleszng-beispielen/01_RingBuffer/report/index.html;C:/Users/49172/Desktop/PI/pi2/klausurVobereitung/Pi2-vorleszng-beispielen/01_RingBuffer/report/style.css;C:/Users/49172/Desktop/PI/pi2/klausurVobereitung/Pi2-vorleszng-beispielen/01_RingBuffer/src/de/uni_bremen/pi2/RingBuffer.java;C:/Users/49172/Desktop/PI/pi2/klausurVobereitung/Pi2-vorleszng-beispielen/01_RingBuffer/test/de/uni_bremen/pi2/NewRingbaberTest.java;C:/Users/49172/Desktop/PI/pi2/klausurVobereitung/Pi2-vorleszng-beispielen/01_RingBuffer/test/de/uni_bremen/pi2/RingBufferTest.java" />
+  </component>
   <component name="libraryTable">
     <library name="RingBuffer">
       <CLASSES>

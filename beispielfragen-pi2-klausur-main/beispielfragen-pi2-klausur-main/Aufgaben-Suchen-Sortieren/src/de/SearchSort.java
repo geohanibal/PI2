@@ -74,8 +74,27 @@ public class SearchSort
      */
     public static <E extends Comparable<E>> E[] mergeSort(final E[] array)
     {
-        return null;
+        E[] result = (E[]) new Object[array.length];
+        result = array;
+
+        mergeSort(result,0,result.length);
+
+        return result;
     }
+
+    private static <E extends Comparable<E>> void mergeSort(final E[] array, final int start, int top){
+        if (start +1 < top){
+            final int middle = start + (top - start)/2;
+            mergeSort(array,start,middle);
+            mergeSort(array,middle,top);
+
+        }
+    }
+    private static <E extends Comparable<E> void merge(final E[]a, final E[]start, final int midle,final int top ){
+
+    }
+
+
 
     /**
      * Hier sollen zwei übergebene Arrays zu einem Array zusammengefügt werden. Dabei soll das Ergebnisarray
